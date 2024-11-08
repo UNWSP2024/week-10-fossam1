@@ -1,0 +1,47 @@
+#Samuel Foss
+#Program 2 Car Class
+#11/8/2024
+
+class car:
+    def __init__(self, yearmodel, make):
+        self.yearmodel = yearmodel
+        self.make = make
+        self.speed = 0
+    def brake(self):
+        if self.speed >= 5:
+            self.speed -= 5
+    def accelerate(self):
+        self.speed += 5
+    def getspeed(self):
+        return self.speed
+def main():
+    mycar = car(2022, "Toyota")
+
+    print("The Car is Accelerating")
+    for _ in range(5):
+        mycar.accelerate()
+        print(f"Your Current speed is", mycar.getspeed())
+
+
+    print("The Car is Breaking")
+    for _ in range(5):
+        mycar.brake()
+        print("Current Speed:", mycar.getspeed())
+
+main()
+
+#Output
+#The Car is Accelerating
+#Your Current speed is 5
+#Your Current speed is 10
+#Your Current speed is 15
+#Your Current speed is 20
+#Your Current speed is 25
+#The Car is Breaking
+#Current Speed: 20
+#Current Speed: 15
+#Current Speed: 10
+#Current Speed: 5
+#Current Speed: 0
+
+#Process finished with exit code 0
